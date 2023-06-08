@@ -12,7 +12,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar bg-gray-100">
+            <div className="navbar fixed z-10 max-w-screen-2xl  bg-gray-800 text-white">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -32,7 +32,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn btn-outline btn-black">Button</a>
+                    <a className="btn btn-outline btn-success border-white text-white">Button</a>
                 </div>
             </div>
         </div>

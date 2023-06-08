@@ -10,7 +10,7 @@ import slider6 from '../../../../src/assets/sliderImgs/slide6.jpg';
 const Banner = () => {
     return (
         <div className="text-center">
-            <Carousel dynamicHeight="true">
+            <Carousel dynamicHeight="true" showThumbs={false}>
                 <div>
                     <img src={slider1} />
                 </div>
