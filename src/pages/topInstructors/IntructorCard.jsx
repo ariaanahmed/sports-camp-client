@@ -7,7 +7,6 @@ const IntructorCard = ({ instructor }) => {
         Aos.init({ duration: 2000 })
     }, []);
 
-    console.log(instructor)
     return (
         <div data-aos="fade-up"
             data-aos-anchor-placement="top-center">

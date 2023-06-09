@@ -5,14 +5,17 @@ const Navbar = () => {
 
     const navbarLi = <>
         <li><Link to='/'>Home</Link></li>
+
         <li><Link to='/instructors'>Instructors</Link></li>
+
         <li><Link to='/classes'>Classes</Link></li>
+
         <li><Link to='/dashboard'>Dashboard</Link></li>
     </>
 
     return (
         <div>
-            <div className="navbar fixed z-10 max-w-screen-2xl  bg-gray-800 text-white">
+            <div className="navbar max-w-screen-2xl  bg-gray-800 text-white">
                 <div className="navbar-start">
                     <div className="dropdown text-black">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
