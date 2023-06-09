@@ -1,0 +1,65 @@
+[
+    {
+        "_id": "642c155b2c4774f05c36eeaa",
+        "name": "Richard Melan",
+        "email": "richardmelan@gmail.com",
+        "image": "https://i.postimg.cc/K8QKztD8/i1.jpg",
+        "rank": "top"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb9",
+        "name": "Haddock Lenthesis",
+        "image": "https://i.postimg.cc/rskHMjKQ/i2.jpg",
+        "email": "haddocklenthesis@yahoo.com",
+        "rank": "second"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7c",
+        "name": "Daniel Mahason",
+        "image": "https://i.postimg.cc/ydf4QSb4/i3.jpg",
+        "email": "danielmahson@gmail.com",
+        "rank": "top"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee88",
+        "name": "Rupert Rodriguez",
+        "image": "https://i.postimg.cc/Mp1Dr3wr/i4.jpg",
+        "email": "rupertrodriguez@gmail.com",
+        "rank": "top"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7a",
+        "name": "James Carter",
+        "image": "https://i.postimg.cc/cJ4FgMq9/i5.jpg",
+        "email": "jamescarter@yahoo.com",
+        "rank": "second"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8c",
+        "name": "Laby Johnson",
+        "image": "https://i.postimg.cc/7h798K76/i6.jpg",
+        "email": "labyjohnson@yahoo.com",
+        "rank": "top"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee94",
+        "name": "Nicolas Desser",
+        "image": "https://i.postimg.cc/3RV5Q02s/i7.jpg",
+        "email": "nicolasdesser@gmail.com",
+        "rank": "second"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee9e",
+        "name": "Aaron Zuckerberg",
+        "image": "https://i.postimg.cc/Qdy2280x/i8.jpg",
+        "email": "aaronzuckerberg@yahoo.com",
+        "rank": "top"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eea6",
+        "name": "Leah Rebenson",
+        "image": "https://i.postimg.cc/d3wp2Ltn/i9.jpg",
+        "email": "leahrebenson@yahoo.com",
+        "rank": "top"
+    }
+]

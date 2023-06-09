@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
+import 'aos/dist/aos.css';
 
 import {
   RouterProvider,
@@ -9,7 +10,7 @@ import { router } from './routes/Routes';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div className='max-w-screen-2xl mx-auto'>
+    <div className='max-w-screen-2xl mx-auto overflow-hidden'>
       <RouterProvider router={router} />
     </div>
   </React.StrictMode>,

@@ -8,8 +8,13 @@ import topClassImg6 from '../../../src/assets/topClass/c6.jpg';
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import SectionTitle from '../../components/sectionTitle/SectionTitle';
+import { useEffect } from 'react';
+import Aos from 'aos';
 
 const PopularClasses = () => {
+    useEffect(() => {
+        Aos.init({ duration: 2000 })
+    }, []);
     const [sliderRef] = useKeenSlider({
         slides: {
             perView: 2,
@@ -17,7 +22,8 @@ const PopularClasses = () => {
         },
     })
     return (
-        <section>
+        <section data-aos="fade-up"
+            data-aos-anchor-placement="top-center">
             <SectionTitle heading={"Popular Classes"}></SectionTitle>
             <div className='my-5'>
                 <div ref={sliderRef} className="keen-slider">
