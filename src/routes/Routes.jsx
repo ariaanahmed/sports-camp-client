@@ -5,6 +5,7 @@ import MainLayout from "../MainLayout/MainLayout";
 import Home from "../pages/home/home/Home";
 import Classes from "../pages/shared/classes/Classes";
 import Instructors from "../pages/shared/instructors/Instructors";
+import Dashboard from "../pages/shared/dashboard/Dashboard";
 
 export const router = createBrowserRouter([
     {
@@ -22,6 +23,11 @@ export const router = createBrowserRouter([
             {
                 path: '/instructors',
                 element: <Instructors/>
+            },
+            {
+                path: '/dashboard',
+                element: <Dashboard/>
+                
             }
         ]
     },

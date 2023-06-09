@@ -1,9 +1,11 @@
-import img from '../../../../src/assets/icons/logo.png';
+import { Helmet } from 'react-helmet-async';
 const Classes = () => {
+
     return (
-        <div>
-            This is the text i want to on my ui
-            <img src={img} alt="" />
+        <div className='pt-20'>
+            <Helmet>
+                <title>Classes</title>
+            </Helmet>
         </div>
     );
 };
