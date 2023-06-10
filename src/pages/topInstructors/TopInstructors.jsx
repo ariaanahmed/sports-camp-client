@@ -5,7 +5,7 @@ import IntructorCard from "./IntructorCard";
 const TopInstructors = () => {
    const [instructors, setInstructors] = useState([])
     useEffect(() => {
-        fetch('teacher.json').then((res) => res.json()).then((data) => {
+        fetch('http://localhost:5000/teachers').then((res) => res.json()).then((data) => {
             const popularInstuctors = data.filter((instructor) => instructor.rank === 'top')
             setInstructors(popularInstuctors);
         })
