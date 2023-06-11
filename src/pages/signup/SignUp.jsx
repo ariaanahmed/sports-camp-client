@@ -1,13 +1,15 @@
 import { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../authProvider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import { Helmet } from 'react-helmet-async';
+import Swal from 'sweetalert2'
 
 const SignUp = () => {
     const [message, setMessage] = useState('');
 
     const { createUser } = useContext(AuthContext)
+    const navigate = useNavigate()
 
     const hanldeSignUp = (event) => {
 
@@ -49,14 +51,23 @@ const SignUp = () => {
                 displayName: name,
                 email: email,
                 photoURL: photoURL
+            }).then(() => {
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'User created successfully!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                navigate('/');
             })
         }
     }
     return (
         <>
-        <Helmet>
-            <title>Sign Up</title>
-        </Helmet>
+            <Helmet>
+                <title>Sign Up</title>
+            </Helmet>
             <div>
                 <div className="pt-5">
                     <div className="hero min-h-screen bg-base-200">

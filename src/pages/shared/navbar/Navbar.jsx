@@ -30,7 +30,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <span>
-                        <img title='logo' className='w-10 h-10' src={logo} alt="" />
+                        <img title='logo' className='w-10 h-10 bg-white p-[1px] rounded-full' src={logo} alt="" />
                     </span>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -41,7 +41,8 @@ const Navbar = () => {
                 <div className="navbar-end">
                     {
                         user ?
-                            <>
+                            <>  
+                                <img title={user?.displayName} className='w-10 h-10 mr-2 rounded-full bg-white p-[1px]' src={user?.photoURL} alt="user-icon" />
                                 <button onClick={handleLogOut} className='btn btn-sm'>Log out</button>
                             </>
                             :

@@ -1,11 +1,15 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../authProvider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 
 const Login = () => {
     const { signIn } = useContext(AuthContext);
     const [message, setMessage] = useState('');
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/';
 
     const hanldeLogin = (event) => {
 
@@ -21,6 +25,8 @@ const Login = () => {
             console.log(user)
             setMessage('Logged in successfully');
             form.reset();
+
+            navigate(from, {replace: true});
         }).catch((error) => {
             setMessage(error.message)
         })
