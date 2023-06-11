@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../authProvider/AuthProvider';
+import { updateProfile } from 'firebase/auth';
 
 const SignUp = () => {
     const [message, setMessage] = useState('');
@@ -37,9 +38,18 @@ const SignUp = () => {
             console.log(newUser);
             form.reset();
             setMessage('Signed Up successfully');
+            updateUserProfile(result.user, name, email, photoURL);
         }).catch((error) => {
             setMessage(error.message)
         })
+
+        const updateUserProfile = (user, name, email, photoURL) => {
+            updateProfile(user, {
+                displayName: name,
+                email: email,
+                photoURL: photoURL
+            })
+        }
     }
     return (
         <div>
