@@ -13,7 +13,6 @@ const Login = () => {
 
     const hanldeLogin = (event) => {
 
-
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
@@ -25,8 +24,8 @@ const Login = () => {
             console.log(user)
             setMessage('Logged in successfully');
             form.reset();
-
             navigate(from, {replace: true});
+            
         }).catch((error) => {
             setMessage(error.message)
         })

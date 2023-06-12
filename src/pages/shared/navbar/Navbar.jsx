@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
 import logo from '../../../../src/assets/icons/logo.png';
-import { } from 'react-icons/fa';
+import { FaBookmark } from 'react-icons/fa';
 import { useContext } from 'react';
 import { AuthContext } from '../../../authProvider/AuthProvider';
+import useBooked from '../../../hooks/useBooked';
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
+    const [booked] = useBooked()
 
     const handleLogOut = () => {
-        logOut().then(() => {}).catch((error) => console.log(error.message));
+        logOut().then(() => { }).catch((error) => console.log(error.message));
     }
 
     const navbarLi = <>
@@ -15,6 +17,9 @@ const Navbar = () => {
         <li><Link to='/instructors'>Instructors</Link></li>
         <li><Link to='/classes'>Classes</Link></li>
         <li><Link to='/dashboard'>Dashboard</Link></li>
+        <li className='border rounded-md'><Link to='/'>
+            <FaBookmark className='w-4 h-4'></FaBookmark> +{booked?.length || 0}
+        </Link></li>
     </>
 
     return (
@@ -41,7 +46,7 @@ const Navbar = () => {
                 <div className="navbar-end">
                     {
                         user ?
-                            <>  
+                            <>
                                 <img title={user?.displayName} className='w-10 h-10 mr-2 rounded-full bg-white p-[1px]' src={user?.photoURL} alt="user-icon" />
                                 <button onClick={handleLogOut} className='btn btn-sm'>Log out</button>
                             </>
