@@ -2,13 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.drawer-side a.active{
+.drawer-side, .menu a.active{
     color: white;
     background-color: rgb(58, 58, 58);
-}
-
-.menu a.active{
-    background-color: rgb(212, 211, 211);
-    color: black;
-    font-weight: 600;
 }

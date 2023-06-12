@@ -12,7 +12,7 @@ const Dashboard = () => {
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 h-full bg-base-200  text-gray-600 uppercase font-bold">
+                    <ul className="menu p-4 w-80 h-full bg-base-200 text-gray-600 uppercase font-bold">
 
                         {/* Sidebar content here */}
                         <li> <NavLink to="/dashboard/myclasses"> <FaBookReader className="w-4 h-4" /> My Classes</NavLink> </li>

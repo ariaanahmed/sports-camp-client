@@ -8,7 +8,7 @@ const useBooked = () => {
     const { refetch, data: bookedClass = [] } = useQuery({
         queryKey: ['booked', user?.email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/bookedClasses?email=${user.email}`)
+            const res = await fetch(`http://localhost:5000/bookedClasses?email=${user?.email}`)
             return res.json();
         }
     })
