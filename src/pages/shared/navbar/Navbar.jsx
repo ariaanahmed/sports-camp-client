@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../../../../src/assets/icons/logo.png';
 import { FaBookmark } from 'react-icons/fa';
 import { useContext } from 'react';
@@ -13,12 +13,12 @@ const Navbar = () => {
     }
 
     const navbarLi = <>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/instructors'>Instructors</Link></li>
-        <li><Link to='/classes'>Classes</Link></li>
-        <li className='border rounded-md'><Link to='/dashboard/mycart'>
+        <li><NavLink to='/'>Home</NavLink></li>
+        <li><NavLink to='/instructors'>Instructors</NavLink></li>
+        <li><NavLink to='/classes'>Classes</NavLink></li>
+        <li className='border rounded-md ml-2'><NavLink to='/dashboard/myclasses'>
             <FaBookmark className='w-4 h-4'></FaBookmark> +{booked?.length || 0}
-        </Link></li>
+        </NavLink></li>
     </>
 
     return (

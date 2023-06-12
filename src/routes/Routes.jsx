@@ -8,42 +8,47 @@ import Instructors from "../pages/shared/instructors/Instructors";
 import Login from "../pages/login/Login";
 import SignUp from "../pages/signup/SignUp";
 import Dashboard from "../MainLayout/Dashboard";
-import MyCart from "../pages/shared/dashboard/myCart/MyCart";
+import MyClasses from "../pages/shared/dashboard/myClasses/MyClasses";
+import EnrolledClasses from "../pages/shared/dashboard/enrolledClasses/EnrolledClasses";
 
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: <MainLayout/>,
+        element: <MainLayout />,
         children: [
             {
                 path: "/",
-                element: <Home/>
+                element: <Home />
             },
             {
                 path: '/classes',
-                element: <Classes/>
+                element: <Classes />
             },
             {
                 path: '/instructors',
-                element: <Instructors/>
+                element: <Instructors />
             },
             {
                 path: 'login',
-                element: <Login/>
+                element: <Login />
             },
             {
                 path: '/signup',
-                element: <SignUp/>
+                element: <SignUp />
             },
         ]
     },
     {
         path: 'dashboard',
-        element: <Dashboard/>,
+        element: <Dashboard />,
         children: [
             {
-                path: 'mycart',
-                element: <MyCart/>
+                path: 'myclasses',
+                element: <MyClasses />
+            },
+            {
+                path: 'enrolledclasses',
+                element: <EnrolledClasses />
             }
         ]
     }
