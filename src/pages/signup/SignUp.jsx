@@ -4,6 +4,7 @@ import { AuthContext } from '../../authProvider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import { Helmet } from 'react-helmet-async';
 import Swal from 'sweetalert2'
+import SocialLogin from '../shared/socialLogin/SocialLogin';
 
 const SignUp = () => {
     const [message, setMessage] = useState('');
@@ -111,6 +112,7 @@ const SignUp = () => {
                                         <Link to="/login" className="label-text-alt link link-hover">Already have an Account? Login!</Link>
                                     </label>
                                     <p>{message}</p>
+                                    <SocialLogin/>
                                 </form>
                             </div>
                         </div>

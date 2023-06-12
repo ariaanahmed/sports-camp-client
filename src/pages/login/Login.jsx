@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../authProvider/AuthProvider";
 import { Helmet } from "react-helmet-async";
+import SocialLogin from "../shared/socialLogin/SocialLogin";
 
 const Login = () => {
     const { signIn } = useContext(AuthContext);
@@ -63,6 +64,7 @@ const Login = () => {
                                     <Link to="/signup" className="label-text-alt link link-hover">New to A12? Sign Up!</Link>
                                 </label>
                                 <p>{message}</p>
+                                <SocialLogin/>
                             </form>
                         </div>
                     </div>
