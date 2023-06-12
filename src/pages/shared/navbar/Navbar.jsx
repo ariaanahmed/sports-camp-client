@@ -16,8 +16,7 @@ const Navbar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/instructors'>Instructors</Link></li>
         <li><Link to='/classes'>Classes</Link></li>
-        <li><Link to='/dashboard'>Dashboard</Link></li>
-        <li className='border rounded-md'><Link to='/'>
+        <li className='border rounded-md'><Link to='/dashboard/mycart'>
             <FaBookmark className='w-4 h-4'></FaBookmark> +{booked?.length || 0}
         </Link></li>
     </>

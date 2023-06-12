@@ -5,10 +5,10 @@ import MainLayout from "../MainLayout/MainLayout";
 import Home from "../pages/home/home/Home";
 import Classes from "../pages/shared/classes/Classes";
 import Instructors from "../pages/shared/instructors/Instructors";
-import Dashboard from "../pages/shared/dashboard/Dashboard";
 import Login from "../pages/login/Login";
 import SignUp from "../pages/signup/SignUp";
-import PrivateRoute from "./PrivateRoute";
+import Dashboard from "../MainLayout/Dashboard";
+import MyCart from "../pages/shared/dashboard/myCart/MyCart";
 
 export const router = createBrowserRouter([
     {
@@ -28,11 +28,6 @@ export const router = createBrowserRouter([
                 element: <Instructors/>
             },
             {
-                path: '/dashboard',
-                element: <PrivateRoute> <Dashboard/> </PrivateRoute>
-                
-            },
-            {
                 path: 'login',
                 element: <Login/>
             },
@@ -42,4 +37,14 @@ export const router = createBrowserRouter([
             },
         ]
     },
+    {
+        path: 'dashboard',
+        element: <Dashboard/>,
+        children: [
+            {
+                path: 'mycart',
+                element: <MyCart/>
+            }
+        ]
+    }
 ]);
