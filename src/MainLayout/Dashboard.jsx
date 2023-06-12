@@ -1,7 +1,9 @@
 import { FaBars, FaBookReader, FaHome, FaSchool, FaWallet } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
+import useBooked from "../hooks/useBooked";
 
 const Dashboard = () => {
+    const [booked] = useBooked()
     return (
         <div>
             <div className="drawer lg:drawer-open">
@@ -15,7 +17,7 @@ const Dashboard = () => {
                     <ul className="menu p-4 w-80 h-full bg-base-200 text-gray-600 uppercase font-bold">
 
                         {/* Sidebar content here */}
-                        <li> <NavLink to="/dashboard/myclasses"> <FaBookReader className="w-4 h-4" /> My Classes</NavLink> </li>
+                        <li> <NavLink to="/dashboard/myclasses"> <FaBookReader className="w-4 h-4" /> My Classes <div className="badge badge-warning">+{booked?.length || 0}</div></NavLink> </li>
                         <li><NavLink to='/dashboard/enrolledclasses'> <FaWallet className="w-4 h-4" /> Enrolled Classes </NavLink></li>
 
                         <div className="divider"></div>
