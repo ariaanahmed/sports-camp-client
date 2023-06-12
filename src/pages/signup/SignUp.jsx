@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../authProvider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import { Helmet } from 'react-helmet-async';
@@ -10,7 +10,11 @@ const SignUp = () => {
     const [message, setMessage] = useState('');
 
     const { createUser } = useContext(AuthContext)
-    const navigate = useNavigate()
+
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/';
 
     const hanldeSignUp = (event) => {
 
@@ -54,7 +58,7 @@ const SignUp = () => {
                 photoURL: photoURL
             }).then(() => {
 
-                const saveUser = {name: user.displayName, email: user.email}
+                const saveUser = { name: user.displayName, email: user.email }
                 fetch('http://localhost:5000/users', {
                     method: 'POST',
                     headers: {
@@ -72,7 +76,7 @@ const SignUp = () => {
                                 showConfirmButton: false,
                                 timer: 1500
                             })
-                            navigate('/');
+                            navigate(from, { replace: true });
                         }
                     })
             })
@@ -112,7 +116,7 @@ const SignUp = () => {
                                         <Link to="/login" className="label-text-alt link link-hover">Already have an Account? Login!</Link>
                                     </label>
                                     <p>{message}</p>
-                                    <SocialLogin/>
+                                    <SocialLogin />
                                 </form>
                             </div>
                         </div>
