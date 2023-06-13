@@ -11,6 +11,11 @@ import Dashboard from "../MainLayout/Dashboard";
 import MyClasses from "../pages/shared/dashboard/myClasses/MyClasses";
 import EnrolledClasses from "../pages/shared/dashboard/enrolledClasses/EnrolledClasses";
 import PrivateRoute from "./PrivateRoute";
+import PaymentHistory from "../pages/shared/dashboard/paymentHistory/PaymentHistory";
+import AdminHome from "../pages/shared/dashboard/adminHome/AdminHome";
+import AddAClass from "../pages/shared/dashboard/addAClass/AddAClass";
+import MyClassInst from "../pages/shared/dashboard/myClassInst/MyClassInst";
+import AllStudents from "../pages/shared/dashboard/allStudents/AllStudents";
 
 export const router = createBrowserRouter([
     {
@@ -50,6 +55,26 @@ export const router = createBrowserRouter([
             {
                 path: 'enrolledclasses',
                 element: <EnrolledClasses />
+            },
+            {
+                path: 'paymenthistory',
+                element: <PaymentHistory />
+            },
+            {
+                path: 'adminhome',
+                element: <AdminHome />
+            },
+            {
+                path: 'addaclass',
+                element: <AddAClass/>,
+            },
+            {
+                path: 'myclassinst',
+                element: <MyClassInst/>
+            },
+            {
+                path: 'allstudents',
+                element: <AllStudents/>
             }
         ]
     }
