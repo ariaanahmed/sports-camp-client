@@ -5,7 +5,7 @@ import IntructorCard from "./IntructorCard";
 const TopInstructors = () => {
    const [instructors, setInstructors] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/teachers').then((res) => res.json()).then((data) => {
+        fetch('https://assignment-12-server-flax.vercel.app/teachers').then((res) => res.json()).then((data) => {
             const popularInstuctors = data.filter((instructor) => instructor.rank === 'top')
             setInstructors(popularInstuctors);
         })

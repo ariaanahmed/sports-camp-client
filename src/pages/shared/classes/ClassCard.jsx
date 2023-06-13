@@ -17,7 +17,7 @@ const ClassCard = ({ classes }) => {
         console.log(classes)
         if (user && user.email) {
             const bookedClass = { classItemId: _id, name, image, price, instructor_name, available_seats, email: user.email }
-            fetch('http://localhost:5000/bookedClasses', {
+            fetch('https://assignment-12-server-flax.vercel.app/bookedClasses', {
                 method: "POST",
                 headers: {
                     'content-type': 'application/json'

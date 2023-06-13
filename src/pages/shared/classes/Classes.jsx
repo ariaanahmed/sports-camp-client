@@ -4,7 +4,7 @@ import ClassCard from './ClassCard';
 const Classes = () => {
     const [allClasses, setAllClasses] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/classes').then((res) => res.json()).then((data) => {
+        fetch('https://assignment-12-server-flax.vercel.app/classes').then((res) => res.json()).then((data) => {
             setAllClasses(data);
         })
     }, [])

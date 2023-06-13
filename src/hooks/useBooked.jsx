@@ -10,7 +10,7 @@ const useBooked = () => {
     const { refetch, data: bookedClass = [] } = useQuery({
         queryKey: ['booked', user?.email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/bookedClasses?email=${user?.email}`,{headers: {
+            const res = await fetch(`https://assignment-12-server-flax.vercel.app/bookedClasses?email=${user?.email}`,{headers: {
                 authorization: `bearer ${token}`
             }})
             return res.json();
