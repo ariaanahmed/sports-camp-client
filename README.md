@@ -18,3 +18,6 @@ client side repo: https://github.com/programming-hero-web-course1/b712-summer-ca
 server side repo: https://github.com/programming-hero-web-course1/b7a12-summer-camp-server_side-ariaanahmed
 
 live site link: https://assignment12-ad3f5.web.app/
+
+email: ari@aan.com
+pass: Ari12#
