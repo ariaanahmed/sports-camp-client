@@ -13,8 +13,8 @@
 13. active route added
 14. join us section added
 
-client side repo: 
+client side repo: https://github.com/programming-hero-web-course1/b712-summer-camp-client-side-ariaanahmed
 
-server side repo: 
+server side repo: https://github.com/programming-hero-web-course1/b7a12-summer-camp-server_side-ariaanahmed
 
 live site link: https://assignment12-ad3f5.web.app/
