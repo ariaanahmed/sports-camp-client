@@ -16,6 +16,7 @@ import AdminHome from "../pages/shared/dashboard/adminHome/AdminHome";
 import AddAClass from "../pages/shared/dashboard/addAClass/AddAClass";
 import MyClassInst from "../pages/shared/dashboard/myClassInst/MyClassInst";
 import AllStudents from "../pages/shared/dashboard/allStudents/AllStudents";
+import NotFount from "../pages/notFount/NotFount";
 
 export const router = createBrowserRouter([
     {
@@ -77,5 +78,9 @@ export const router = createBrowserRouter([
                 element: <AllStudents/>
             }
         ]
+    },
+    {
+        path: '*',
+        element: <NotFount/>
     }
 ]);
