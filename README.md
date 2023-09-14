@@ -1,3 +1,5 @@
+Live site: https://assignment12-ad3f5.web.app/
+![img](https://github.com/ariaanahmed/sports-camp-client/assets/121677432/b697302f-b208-437c-b574-672341d9123a)
 1. Navbar created. Login with google added.
 2. aos effect added
 3. banner added
@@ -14,10 +16,7 @@
 14. join us section added
 
 client side repo: https://github.com/programming-hero-web-course1/b712-summer-camp-client-side-ariaanahmed
-
 server side repo: https://github.com/programming-hero-web-course1/b7a12-summer-camp-server_side-ariaanahmed
-
-live site link: https://assignment12-ad3f5.web.app/
 
 email: ari@aan.com
 pass: Ari12#
