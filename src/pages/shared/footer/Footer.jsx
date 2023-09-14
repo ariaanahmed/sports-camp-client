@@ -6,7 +6,7 @@ const Footer = () => {
         <footer style={{marginTop: 'auto'}}>
             <div className="footer p-10 bg-gray-900 text-neutral-content">
                 <div>
-                    <p className='text-3xl font-semibold'>Assignment12</p>
+                    <p className='text-3xl font-semibold'>A12</p>
                     <p className='font-normal'>By Ariaan Ahmed<br />MERN Stack Developer</p>
                 </div>
                 <div>
